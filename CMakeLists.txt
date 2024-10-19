@@ -14,7 +14,9 @@ FILE(GLOB_RECURSE GLSL "resources/*.glsl")
 # Set the executable.
 message(STATUS "Including ${CMAKE_SOURCE_DIR}/include")
 include_directories(${CMAKE_SOURCE_DIR}/include)
-ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL})
+ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL}
+        src/Transform.h
+        src/Component.h)
 
 # Use FetchContent to download and build GLM, GLFW, and Vulkan SDK
 
